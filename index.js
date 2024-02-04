@@ -14,7 +14,7 @@ app.use(express.json());
 app.use("/videos", videoRoutes);
 
 app.get("/", (req, res) => {
-  res.json("melanie");
+  res.json("is this working");
 });
 
 app.listen(PORT || 8000, () => {

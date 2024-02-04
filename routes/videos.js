@@ -3,6 +3,7 @@ const fs = require("fs");
 const router = express.Router();
 const { v4: uuidv4 } = require("uuid");
 const videoData = require("../data/video-details.json");
+router.use("/public", express.static("public"));
 
 router
   .route("/")
@@ -19,7 +20,7 @@ router
       id: uuidv4(),
       title: req.body.title,
       channel: "Melanie Nguyen Don",
-      image: "https://project-2-api.herokuapp.com/images/image0.jpg",
+      image: `https://localhost:5050/images/Upload-video-preview.png`,
       description: req.body.description,
       views: "1,700,001,023",
       likes: "1,000,985,000",
@@ -29,15 +30,15 @@ router
       comments: [], //empty because you dont have any comments yet
     };
 
-    const freshVideoList = JSON.parse.fs.readFileSync(
-      "../data/video-details.json"
-    );
+    const freshVideoListFile = fs.readFileSync("./data/video-details.json");
+    const freshVideoList = JSON.parse(freshVideoListFile);
     freshVideoList.push(newUpload);
+    console.log(freshVideoList);
     fs.writeFileSync(
-      "../data/video-details.json",
+      "./data/video-details.json",
       JSON.stringify(freshVideoList)
     );
-    res.status(201).json(videoData);
+    res.status(201).json(freshVideoList);
   });
 
 router.route("/:videoId").get((req, res) => {

@@ -1,12 +1,18 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+
 require("dotenv").config();
 
 const videoRoutes = require("./routes/videos");
+const router = require("./routes/videos");
 
 const { PORT } = process.env;
 
+var path = require("path");
+app.use(express.static(path.join(__dirname, "public")));
+
+app.use("/public", express.static("public"));
 app.use(cors());
 app.use(express.json());
 app.use("/images", express.static("/public/images"));

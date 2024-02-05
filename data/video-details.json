@@ -299,44 +299,5 @@
         "timestamp": 1632496261000
       }
     ]
-  },
-  {
-    "id": "9de63a5f-376d-40fb-8af2-2586b8d8e8c7",
-    "title": "melanie",
-    "channel": "Melanie Nguyen Don",
-    "image": "https://project-2-api.herokuapp.com/images/image0.jpg",
-    "description": "is suffering a lot",
-    "views": "1,700,001,023",
-    "likes": "1,000,985,000",
-    "duration": "1:11",
-    "video": "https://project-2-api.herokuapp.com/stream",
-    "timestamp": 1707028366680,
-    "comments": []
-  },
-  {
-    "id": "286a41fc-fab2-4d8e-9766-32047d03c3e5",
-    "title": "kjvnskv",
-    "channel": "Melanie Nguyen Don",
-    "image": "https://i.ibb.co/sVX1wdM/Upload-video-preview.jpg",
-    "description": "jknvsa",
-    "views": "0",
-    "likes": "0",
-    "duration": "1:11",
-    "video": "https://project-2-api.herokuapp.com/stream",
-    "timestamp": 1707088093948,
-    "comments": []
-  },
-  {
-    "id": "b47c9d9b-52e7-4f8b-a776-41a2277bf136",
-    "title": "test",
-    "channel": "Melanie Nguyen Don",
-    "image": "https://i.ibb.co/sVX1wdM/Upload-video-preview.jpg",
-    "description": "test",
-    "views": "0",
-    "likes": "0",
-    "duration": "1:11",
-    "video": "https://project-2-api.herokuapp.com/stream",
-    "timestamp": 1707115723914,
-    "comments": []
   }
 ]

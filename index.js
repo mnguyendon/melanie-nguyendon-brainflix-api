@@ -10,10 +10,11 @@ const { PORT } = process.env;
 //middleware
 app.use(cors());
 app.use(express.json());
+app.use("/images", express.static("/public/images"));
 
 app.use("/videos", videoRoutes);
 
-app.get("/", (req, res) => {
+app.get("/", (_req, res) => {
   res.json("is this working");
 });
 

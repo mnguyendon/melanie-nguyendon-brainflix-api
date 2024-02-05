@@ -7,7 +7,6 @@ const videoRoutes = require("./routes/videos");
 
 const { PORT } = process.env;
 
-//middleware
 app.use(cors());
 app.use(express.json());
 app.use("/images", express.static("/public/images"));
@@ -21,8 +20,3 @@ app.get("/", (_req, res) => {
 app.listen(PORT || 8000, () => {
   console.log(`Running on ${PORT || 8000}`);
 });
-
-// notes to myself ---> api middleware (401 error)
-// app.use((req, res, next) =>{
-
-// })
